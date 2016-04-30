@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Birst Challenge</title>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="bg"></div>
+  <div class="topbar">
+    <div class="score">Current score: <span>0</span></div>
+    <a href="#" class="mute button"><img src="img/unmute.svg"></a>
+    <a href="#" class="button difficulty" data-name="Easy">Easy</a>
+    <a href="#" class="button difficulty" data-name="Medium">Medium</a>
+    <a href="#" class="button difficulty" data-name="Hard">Hard</a>
+    <div class='reminder'> Select difficulty to start the game > </div>  
+  </div>
+  <div class='gameCube'>
+  </div>
+  <script src="src/init.js"></script>
+  <audio loop>
+    <source src="power.mp3" type="audio/mpeg"> Your browser does not support the audio tag.
+  </audio>
+  <div class='gameEnd'>
+    <p> Sorry, you lost! Your final score is: <span id='finalScore'>0</span></p>
+    <p> Would you like to try again? </p>
+    <button class='startOver'>Start over</button>
+  </div>
+</body>
+
+</html>
