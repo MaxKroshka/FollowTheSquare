@@ -1,0 +1,151 @@
+body,
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0px;
+  font-size: 18px;
+  position: relative;
+  background-color: black;
+}
+
+.bg {
+  background: url(img/bg.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.topbar {
+  height: 32px;
+  background-color: transparent;
+  position: relative;
+}
+
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+}
+
+.score {
+  float: left;
+  padding: 5px 12px;
+  color: #1abc9c;
+}
+
+.reminder {
+  padding: 5px 12px;
+  color: #f1c40f;
+  display: block;
+  float: right;
+}
+
+.button {
+  padding: 5px 12px;
+  float: right;
+  color: #1abc9c;
+}
+
+.mute {
+  height: 24px;
+  width: 24px;
+  display: inline-block;
+  background-color: orange;
+  border-radius: 50%;
+  padding: 2px;
+}
+
+.mute img {
+  max-width: 100%;
+}
+
+.gameCube {
+  background-color: #34495e;
+  position: fixed;
+  display: none;
+}
+
+.gameEnd {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+  width: auto;
+  height: auto;
+  background-color: #34495e;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+
+/* Bubble animation */
+
+@keyframes bubbleUp {
+  0% {
+    bottom: -100px;
+    -webkit-transform: scale(.9);
+    opacity: 0
+  }
+  1% {
+    bottom: -100px;
+    -webkit-transform: scale(.3);
+    opacity: 0
+  }
+  30% {
+    bottom: -100px;
+    -webkit-transform: scale(.8);
+    opacity: 1
+  }
+  95% {
+    bottom: 110%;
+    -webkit-transform: scale(.3);
+    opacity: 1
+  }
+  99% {
+    bottom: 110%;
+    -webkit-transform: scale(3);
+    opacity: 0
+  }
+  100% {
+    bottom: -100px;
+    -webkit-transform: scale(.9);
+    opacity: 0
+  }
+}
+
+.bubble {
+  background: #fff;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  display: block;
+  left: 110px;
+  bottom: 110px;
+  border-radius: 100px;
+  background: -moz-radial-gradient(center 45deg, circle closest-corner, rgba(75, 190, 200, 0), rgba(75, 190, 200, .1), rgba(75, 190, 200, .3), rgba(255, 255, 255, .7));
+  background: -webkit-gradient(radial, center center, 0, center center, 100, from(rgba(75, 190, 200, .2)), to(rgba(255, 255, 255, .7)));
+  background: gradient(center 45deg, circle closest-corner, rgba(75, 190, 200, 0), rgba(75, 190, 200, .1), rgba(75, 190, 200, .3), rgba(255, 255, 255, .7));
+  background: -ms-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0) 0%, rgba(9, 133, 167, 0.1) 51%, rgba(9, 133, 167, 0.3) 71%, rgba(9, 133, 167, .7) 100%);
+  animation: bubbleUp 4s infinite ease-in-out;
+  -webkit-animation: bubbleUp 4s infinite ease-in-out;
+  -o-animation: bubbleUp 4s infinite ease-in-out;
+  -moz-animation: bubbleUp 4s infinite ease-in-out;
+}
